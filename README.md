@@ -1,7 +1,5 @@
 # My4Cut
 
-![My4Cut Logo](https://github.com/yourusername/my4cut/blob/main/assets/logo.png?raw=true)
-
 **My4Cut**은 사용자, 포토 프레임, 기여를 원활하게 관리할 수 있도록 설계된 강력하고 확장 가능한 애플리케이션입니다. Kotlin 기반의 Spring Boot 백엔드, PostgreSQL 데이터베이스, SwiftUI 프론트엔드를 활용하여 데이터 무결성과 성능을 강화한 현대적이고 효율적인 사용자 및 콘텐츠 관리 솔루션을 제공합니다.
 
 > **주의**: 이 레포지토리는 과제 제출용으로 비밀키는 제거된 상태로 공개되어 있습니다. 실제 운영 환경에서는 비밀키 및 민감한 정보가 포함되지 않도록 주의해 주세요.
