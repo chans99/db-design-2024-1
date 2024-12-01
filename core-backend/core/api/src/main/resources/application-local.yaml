@@ -1,0 +1,50 @@
+server:
+  tomcat:
+    max-http-form-post-size: 10MB
+
+spring:
+  config:
+    activate:
+      on-profile: local
+    import: application-secret.properties
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB
+      max-request-size: 40MB
+jwt:
+  secret-key: ${JWT_SECRET}
+
+aws-property:
+  bucket-name: ${PROD_AWS_S3_BUCKET_NAME}
+  cloudfront-url: ${PROD_AWS_CLOUDFRONT_URL}
+  access-key: ${PROD_AWS_ACCESS_KEY}
+  secret-key: ${PROD_AWS_SECRET_KEY}
+  aws-region: ${PROD_AWS_REGION}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+
+sentry:
+  enabled: true
+  exception-resolver-order: -2147483647
+  max-request-body-size: always
+  send-default-pii: true
+  traces-sample-rate: 1.0
+  environment: local
